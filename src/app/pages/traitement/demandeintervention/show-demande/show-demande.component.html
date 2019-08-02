@@ -1,0 +1,139 @@
+
+<div class="col-md-12 col-lg-12" style="width:950px; height: 450px">
+  <div class="row">
+    <div class="col-lg-12" style="width:600px; height: 300px">
+
+
+      <nb-card >
+        <nb-card-body>
+
+          <div class="row full-name-inputs label">
+            <div class="input-group col-md-2   input-group-sm">
+              <label class="text-label" for="emission">N° émission</label>
+            </div>
+
+            <div class="input-group col-md-4   input-group-sm">
+              <label for="dateDemande">Date Demande</label>
+            </div>
+
+            <div class="input-group col-md-5   input-group-sm">
+              <label for="machine">Machine</label>
+            </div>
+          </div>
+
+
+          <div class="row full-name-inputs">
+            <div class="input-group col-md-2   input-group-sm">
+              <input type="number" name="N°emission" #emission [(ngModel)]="demande.emission" maxlength="50" class="form-control"  disabled>
+            </div>
+
+            <div class="input-group col-md-4   input-group-sm">
+              <input name="dateDemande" #dateDemande  [(ngModel)]="demande.dateDemande" class="form-control" [nbDatepicker]="sdatepicker" disabled required/>
+              <nb-datepicker #sdatepicker ></nb-datepicker>
+            </div>
+            <div class="input-group col-md-5   input-group-sm">
+              <nb-select hero placeholder="Choisir une machine" name="Machine" [(ngModel)]="selectedItemNgModel">
+                <nb-option *ngFor="let machine of machines" [value]="machine" i18n="machine">{{machine.designation}}</nb-option>
+              </nb-select>
+            </div>
+          </div>
+          <div class="row full-name-inputs label">
+
+            <div class="input-group col-md-4   input-group-sm">
+              <label for="demandeur">Demandeur</label>
+            </div>
+            <div class="input-group col-md-3   input-group-sm">
+              <label for="tel">Téléphone</label>
+            </div>
+            <div class="input-group col-md-4   input-group-sm">
+              <label for="datesouhaite">Date souhaitée</label>
+            </div>
+          </div>
+          <div class="row full-name-inputs">
+
+            <div class="input-group col-md-4   input-group-sm">
+              <input type="text" name="demandeur"   #demandeur [(ngModel)]="demande.demandeur" class="form-control" disabled>
+            </div>
+            <div class="input-group col-md-3   input-group-sm">
+              <input type="number" name="tel"  #tel [(ngModel)]="demande.tel" class="form-control" disabled>
+            </div>
+            <div class="input-group col-md-4   input-group-sm">
+              <input name="datesouhaite" #datesouhaite  [(ngModel)]="demande.datesouhaite" class="form-control" [nbDatepicker]="sdatepicker1" disabled required/>
+              <nb-datepicker #sdatepicker1 ></nb-datepicker>
+            </div>
+          </div>
+
+          <div class="row full-name-inputs label">
+
+            <div class="input-group col-md-3   input-group-sm">
+              <label for="typePanne">Type de panne</label>
+            </div>
+            <div class="input-group col-md-3   input-group-sm">
+              <label for="causePanne">Cause</label>
+            </div>
+            <div class="input-group col-md-5   input-group-sm">
+              <label for="etatDemande">Etat de la demande</label>
+            </div>
+          </div>
+
+          <div class="row full-name-inputs">
+
+            <div class="input-group col-md-3 input-group-sm">
+              <input type="text" name="typePanne"   #typePanne [(ngModel)]="demande.typePanne" class="form-control" disabled>
+            </div>
+            <div class="input-group col-md-3 input-group-sm">
+              <input type="text" name="causePanne"   #causePanne [(ngModel)]="demande.causePanne" class="form-control" disabled>
+
+            </div>
+            <div class="input-group col-md-5 input-group-sm">
+              <input type="text" name="etatDemande"   #etatDemande [(ngModel)]="demande.etatDemande" class="form-control" disabled>
+
+            </div>
+          </div>
+
+          <div class="row full-name-inputs label">
+            <div class="input-group col-md-4   input-group-sm">
+              <label for="realisepar">A réaliser par</label>
+            </div>
+            <div class="input-group col-md-7   input-group-sm">
+              <label for="localisationDemande">Localisation</label>
+            </div>
+          </div>
+
+          <div class="row full-name-inputs">
+            <div class="input-group col-md-4   input-group-sm">
+
+              <input type="text" name="realisepar"   #realisepar [(ngModel)]="demande.realisepar" class="form-control" disabled>
+
+            </div>
+
+
+            <div class="input-group col-md-7   input-group-sm">
+              <input type="text" name="localisationDemande" #localisationDemande   [(ngModel)]="demande.localisationDemande" disabled class="form-control"/>
+
+            </div></div>
+          <div class="row full-name-inputs label">
+            <div class="input-group col-md-11   input-group-sm">
+              <label for="com">Description</label>
+            </div>
+          </div>
+
+          <div class="row full-name-inputs">
+
+            <div class="input-group col-md-11   input-group-sm">
+              <textarea rows="4" placeholder="Description" class="form-control" #com
+                        [(ngModel)]="demande.descDemande" disabled></textarea>
+            </div>
+          </div>
+        </nb-card-body>
+      </nb-card>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+

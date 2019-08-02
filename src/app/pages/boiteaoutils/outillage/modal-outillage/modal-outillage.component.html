@@ -1,0 +1,106 @@
+
+<div class="col-md-12 col-lg-12" style="width:500px; height: 350px">
+  <div class="row">
+    <div class="col-lg-12" style="width:600px; height: 350px">
+
+
+      <nb-card >
+        <nb-card-body>
+
+          <div class="row full-name-inputs label">
+            <div class="input-group col-md-6   input-group-sm">
+              <label class="text-label" for="designationO">Désignation</label>
+            </div>
+
+            <div class="input-group col-md-5   input-group-sm">
+              <label for="libelle">Libellé</label>
+            </div>
+
+
+          </div>
+
+          <div class="row full-name-inputs">
+            <div class="input-group col-md-6  input-group-sm">
+              <input type="text" name="Désignation" #designationO [(ngModel)]="outillage.designationO" maxlength="50" class="form-control"  >
+            </div>
+
+            <div class="input-group col-md-5   input-group-sm">
+              <input type="text" name="libelle" #libelle [(ngModel)]="outillage.libelleO" class="form-control">
+            </div>
+
+          </div>
+          <div class="row full-name-inputs label">
+
+            <div class="input-group col-md-5   input-group-sm">
+              <label for="ref">Référence</label>
+            </div>
+
+            <div class="input-group col-md-3   input-group-sm">
+            <label for="quantite">Quantité</label>
+          </div>
+            <div class="input-group col-md-3   input-group-sm">
+              <label for="prix">Prix unitaire</label>
+            </div>
+          </div>
+          <div class="row full-name-inputs">
+
+            <div class="input-group col-md-5   input-group-sm">
+              <input type="text" name="ref"   #ref [(ngModel)]="outillage.refO" class="form-control">
+            </div>
+            <div class="input-group col-md-3   input-group-sm">
+              <input type="number" name="quantite"  #quantite [(ngModel)]="outillage.quantiteO" class="form-control">
+            </div>
+            <div class="input-group col-md-3   input-group-sm">
+              <input type="number" name="prix"  #prix [(ngModel)]="outillage.prixO" class="form-control">
+            </div>
+          </div>
+
+          <div class="row full-name-inputs label">
+               <div class="input-group col-md-6   input-group-sm">
+              <label for="dateAjout">Date d'Achat</label>
+            </div>
+            <div class="input-group col-md-5   input-group-sm">
+              <label for="type">Type d'outils</label>
+            </div>
+          </div>
+
+          <div class="row full-name-inputs">
+
+            <div class="input-group col-md-6   input-group-sm">
+              <input name="dateAjout" #dateAjout  [(ngModel)]="outillage.dateO" class="form-control" [nbDatepicker]="sdatepicker" required/>
+              <nb-datepicker #sdatepicker ></nb-datepicker>
+            </div>
+
+            <div class="input-group col-md-5   input-group-sm">
+              <input type="text" name="type"  #type [(ngModel)]="outillage.typeO" class="form-control">
+            </div>
+
+          </div>
+
+
+          <div class="row full-name-inputs label">
+            <div class="input-group col-md-11   input-group-sm">
+              <label for="com">Remarque</label>
+            </div>
+          </div>
+
+          <div class="row full-name-inputs">
+
+            <div class="input-group col-md-11   input-group-sm">
+              <textarea rows="3" placeholder="Remarque" class="form-control" #com
+                        [(ngModel)]="outillage.remarque"></textarea>
+            </div>
+          </div>
+
+          <div style="text-align:right;">
+            <button nbButton style="cursor: pointer;margin: 0.5rem;align-content: center;" (click)="onAddRCM()">{{ARCM}}</button>
+            <button nbButton style="cursor: pointer;margin: 0.5rem;align-content: center;">Annuler</button>
+          </div>
+        </nb-card-body>
+      </nb-card>
+    </div>
+  </div>
+
+</div>
+
+

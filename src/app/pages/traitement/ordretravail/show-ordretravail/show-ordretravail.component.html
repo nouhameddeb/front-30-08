@@ -1,0 +1,127 @@
+
+<div class="col-md-12 col-lg-12" style="width:950px; height: 450px">
+  <div class="row">
+    <div class="col-lg-12" style="width:600px; height: 300px">
+
+
+      <nb-card >
+        <nb-card-body>
+
+          <div class="row full-name-inputs label">
+            <div class="input-group col-md-2   input-group-sm">
+              <label class="text-label" for="numOrdre">N° Ordre</label>
+            </div>
+
+            <div class="input-group col-md-4   input-group-sm">
+              <label for="machine">Machine</label>
+            </div>
+
+            <div class="input-group col-md-5   input-group-sm">
+              <label for="module">Module</label>
+            </div>
+          </div>
+
+
+          <div class="row full-name-inputs">
+            <div class="input-group col-md-2   input-group-sm">
+              <input type="number" name="N° Ordre" #numOrdre [(ngModel)]="ordre.numOrdre" maxlength="50" class="form-control"  disabled>
+            </div>
+
+            <div class="input-group col-md-5   input-group-sm">
+              <nb-select hero placeholder="Choisir une machine" name="Machine" [(ngModel)]="selectedItemNgModel">
+                <nb-option *ngFor="let machine of machines" [value]="machine" i18n="machine">{{machine.designation}}</nb-option>
+              </nb-select>
+            </div>
+            <div class="input-group col-md-4   input-group-sm">
+              <input type="text" name="Module" #module [(ngModel)]="ordre.module" maxlength="50" class="form-control"  disabled>
+            </div>
+          </div>
+          <div class="row full-name-inputs label">
+
+            <div class="input-group col-md-4   input-group-sm">
+              <label for="demandeur">N° Emission</label>
+            </div>
+            <div class="input-group col-md-3   input-group-sm">
+              <label for="tel">Date Création</label>
+            </div>
+            <div class="input-group col-md-4   input-group-sm">
+              <label for="datesouhaite">Date souhaitée</label>
+            </div>
+          </div>
+          <div class="row full-name-inputs">
+
+            <div class="input-group col-md-4   input-group-sm">
+              <input type="text" name="demandeur"   #demandeur [(ngModel)]="ordre.demande" class="form-control" disabled>
+            </div>
+            <div class="input-group col-md-3   input-group-sm">
+              <input name="dateOT" #dateOT  [(ngModel)]="ordre.dateOT" class="form-control" [nbDatepicker]="sdatepicker" disabled required/>
+              <nb-datepicker #sdatepicker ></nb-datepicker>
+            </div>
+            <div class="input-group col-md-4   input-group-sm">
+              <input name="dateFin" #dateFin  [(ngModel)]="ordre.dateFin" class="form-control" [nbDatepicker]="sdatepicker1" disabled required/>
+              <nb-datepicker #sdatepicker1 ></nb-datepicker>
+            </div>
+          </div>
+
+          <div class="row full-name-inputs label">
+
+            <div class="input-group col-md-3   input-group-sm">
+              <label for="typeMaintenance">Type Maintenance</label>
+            </div>
+            <div class="input-group col-md-3   input-group-sm">
+              <label for="NiveauMaintenance">Niveau maintenance</label>
+            </div>
+            <div class="input-group col-md-5   input-group-sm">
+              <label for="Criticite">Criticité</label>
+            </div>
+          </div>
+
+          <div class="row full-name-inputs">
+
+            <div class="input-group col-md-3 input-group-sm">
+              <input type="text" name="typeMaintenance"   #typeMaintenance [(ngModel)]="ordre.typeMaintenance" class="form-control" disabled>
+            </div>
+            <div class="input-group col-md-3 input-group-sm">
+              <input type="text" name="NiveauMaintenance"   #NiveauMaintenance [(ngModel)]="ordre.niveauMaintenance" class="form-control" disabled>
+
+            </div>
+            <div class="input-group col-md-5 input-group-sm">
+              <input type="text" name="Criticite"   #Criticite [(ngModel)]="ordre.criticite" class="form-control" disabled>
+
+            </div>
+          </div>
+
+          <div class="row full-name-inputs label">
+            <div class="input-group col-md-4   input-group-sm">
+              <label for="pieces">Pièces utilisés</label>
+            </div>
+            <div class="input-group col-md-7   input-group-sm">
+              <label for="outillages">Outillages utilisés</label>
+            </div>
+          </div>
+
+       <!--   <div class="row full-name-inputs">
+            <div class="input-group col-md-4   input-group-sm">
+
+              <input type="text" name="realisepar"   #realisepar [(ngModel)]="demande.realisepar" class="form-control" disabled>
+
+            </div>
+
+
+            <div class="input-group col-md-7   input-group-sm">
+              <input type="text" name="localisationDemande" #localisationDemande   [(ngModel)]="demande.localisationDemande" disabled class="form-control"/>
+
+            </div></div>-->
+
+        </nb-card-body>
+      </nb-card>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+

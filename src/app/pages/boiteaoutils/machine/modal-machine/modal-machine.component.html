@@ -1,0 +1,295 @@
+<!--
+<div class="col-md-12 col-lg-12" style="width:950px; height: 450px">
+  <div class="row">
+    <div class="col-lg-12" style="width:600px; height: 300px">
+      <nb-card>
+        <nb-card-body>
+
+          <div class="row full-name-inputs label">
+
+            <div class="input-group col-md-3 col-lg-3 input-group-sm">
+              <label>Désignation</label>
+            </div></div>
+          <div class="row full-name-inputs">
+
+            <div class="input-group col-md-4 col-lg-4 input-group-sm">
+              <input type="text" placeholder="Désignation" class="form-control"
+                     [(ngModel)]="machine.designation"/>
+            </div>
+            <div class="row full-name-inputs label">
+
+              <div class="input-group col-md-3 col-lg-3 input-group-sm">
+                <label>Code</label>
+              </div></div>
+
+            <div class="input-group col-md-3 col-lg-2 input-group-sm">
+              <input type="number" placeholder="Code" class="form-control"
+                     [(ngModel)]="machine.code"/>
+            </div>
+            <div class="input-group col-md-4 col-lg-4 input-group-sm">
+              <input type="text" placeholder="Libellé" class="form-control"
+                     [(ngModel)]="machine.libelle"/>
+            </div>
+            <div class="input-group col-md-2 col-lg-2 input-group-sm">
+              <input type="text" placeholder="Référence" class="form-control"
+                     [(ngModel)]="machine.reference"/>
+            </div>
+          </div>
+
+          <div class="row full-name-inputs">
+            <div class="input-group col-md-4 col-lg-3 input-group-sm">
+              <input type="text" placeholder="Type" class="form-control"
+                     [(ngModel)]="machine.type"/>
+            </div>
+            <div class="input-group col-md-4 col-lg-3 input-group-sm">
+              <input type="text" placeholder="Modèle" class="form-control"
+                     [(ngModel)]="machine.modele"/>
+            </div>
+            <div class="input-group col-md-4 col-lg-3 input-group-sm">
+              <input type="text" placeholder="Marque" class="form-control"
+                     [(ngModel)]="machine.marque"/>
+            </div>
+
+            <div class="input-group col-md-4 col-lg-3 input-group-sm">
+              <input type="text" placeholder="Fabricant" class="form-control"
+                     [(ngModel)]="machine.fabricant"/>
+            </div>
+
+          </div>
+          <div class="row full-name-inputs label">
+
+            <div class="input-group col-md-3 col-lg-3 input-group-sm">
+              <label>Fournisseur</label>
+            </div></div>
+          <div class="row full-name-inputs">
+
+            <div class="input-group col-md-3 col-lg-3 input-group-sm">
+            <input type="text" placeholder="Fournisseur" class="form-control"
+                   [(ngModel)]="machine.fournisseur"/>
+          </div>
+           <div class="input-group col-md-3 col-lg-3 input-group-sm">
+
+            <input name="date Acquisition" #startdate  placeholder="date Acquisition" [(ngModel)]="machine.dateAcquisition" class="form-control" [nbDatepicker]="sdatepicker" i18n="@@startdate" required >
+            <nb-datepicker #sdatepicker ></nb-datepicker>
+           </div>
+            <div class="input-group col-md-4 col-lg-3 input-group-sm">
+              <input name="Fin de garantie" #startdate placeholder="Fin de garantie"  [(ngModel)]="machine.finGarantie" class="form-control" [nbDatepicker]="sdatepicker1" i18n="@@startdate" required >
+              <nb-datepicker #sdatepicker1 ></nb-datepicker>
+            </div>
+
+          </div>
+          <div class="row full-name-inputs">
+
+            <div class="form-group col-md-6 col-lg-3 input-group-sm">
+            <select class="form-control" hero placeholder="Criticité" status="info"
+                    size="xsmall"    [(ngModel)]="machine.criticite"><option >Criticité</option>
+              <option value="Faible" >Criticité faible</option>
+              <option value="Moyenne" >Criticité moyenne</option>
+              <option value="Elevée" >Criticité élevée</option>
+              <option value="Très élevée" >Criticité très élevée</option>
+            </select>
+          </div>
+            <div class="form-group col-md-6 col-lg-2 input-group-sm">
+              <select class="form-control" hero placeholder="Etat" status="info"
+                      size="xsmall"    [(ngModel)]="machine.etat"><option >Etat</option>
+                <option value="Faible" >En attente</option>
+                <option value="Moyenne" >Réfusée</option>
+                <option value="Elevée" >Accéptée</option>
+              </select>
+            </div>
+
+          </div>
+
+           &lt;!&ndash;<div class="row full-name-inputs">
+            <div class="input-group col-md-12 col-lg-12 input-group-sm">
+              <input type="text" placeholder="Localisation" class="form-control"
+                     [(ngModel)]="machine.localisation"/>
+            </div>
+          </div>&ndash;&gt;
+
+         &lt;!&ndash; <div class="row full-name-inputs">
+            <div class="input-group col-md-12 col-lg-12 input-group-sm">
+              <textarea rows="5" placeholder="Commentaires" class="form-control"
+                        [(ngModel)]="machine.commentaires"></textarea>
+            </div>
+          </div>&ndash;&gt;
+          <div style="text-align:right;">
+            <button nbButton style="cursor: pointer;margin: 0.5rem;align-content: center;" (click)="onAddRCM()">{{ARCM}}</button>
+            <button nbButton style="cursor: pointer;margin: 0.5rem;align-content: center;">Annuler</button>
+          </div>
+        </nb-card-body>
+      </nb-card>
+    </div>
+  </div>
+
+</div>
+-->
+<div class="col-md-12 col-lg-12" style="width:950px; height: 450px">
+  <div class="row">
+    <div class="col-lg-12" style="width:600px; height: 300px">
+
+
+  <nb-card >
+    <nb-card-body>
+
+        <div class="row full-name-inputs label">
+          <div class="input-group col-md-7   input-group-sm">
+            <label class="text-label" for="designation">Désignation</label>
+          </div>
+
+          <div class="input-group col-md-5   input-group-sm">
+            <label for="libelle">Libellé</label>   </div>
+        </div>
+
+
+
+        <div class="row full-name-inputs">
+          <div class="input-group col-md-7   input-group-sm">
+            <input type="text" name="Désignation" #designation [(ngModel)]="machine.designation" maxlength="50" class="form-control"  required="required">
+          </div>
+
+          <div class="input-group col-md-5   input-group-sm">
+            <input type="text" name="libelle" #libelle [(ngModel)]="machine.libelle" class="form-control" required="required">
+          </div>
+        </div>
+        <div class="row full-name-inputs label">
+          <div class="input-group col-md-2   input-group-sm">
+            <label for="code">Code</label>
+          </div>
+
+          <div class="input-group col-md-3   input-group-sm">
+          <label for="ref">Référence</label>
+        </div>
+          <div class="input-group col-md-3   input-group-sm">
+            <label for="type">Type</label>
+          </div>
+          <div class="input-group col-md-4   input-group-sm">
+            <label for="modele">Modèle</label>
+          </div>
+        </div>
+        <div class="row full-name-inputs">
+          <div class="input-group col-md-2   input-group-sm">
+            <input type="number" #code name="code" [(ngModel)]="machine.code" class="form-control" required/>
+          </div>
+
+          <div class="input-group col-md-3   input-group-sm">
+          <input type="text" name="ref"   #ref [(ngModel)]="machine.reference" class="form-control" required>
+        </div>
+          <div class="input-group col-md-3   input-group-sm">
+            <input type="text" name="type"  #type [(ngModel)]="machine.type" class="form-control" required>
+          </div>
+          <div class="input-group col-md-4   input-group-sm">
+            <input type="text" name="modele"   #modele [(ngModel)]="machine.modele" class="form-control" required>
+          </div>
+        </div>
+
+        <div class="row full-name-inputs label">
+
+          <div class="input-group col-md-5   input-group-sm">
+            <label for="marque">Marque</label>
+          </div>
+          <div class="input-group col-md-4   input-group-sm">
+            <label for="fabricant">Fabricant</label>
+          </div>
+          <div class="input-group col-md-3   input-group-sm">
+            <label for="fournisseur">Fournisseur</label>
+          </div>
+        </div>
+
+        <div class="row full-name-inputs">
+
+          <div class="input-group col-md-5   input-group-sm">
+            <input type="text" name="marque" #marque  [(ngModel)]="machine.marque" class="form-control" required/>
+          </div>
+          <div class="input-group col-md-4   input-group-sm">
+            <input type="text" name="fabricant" #fabricant   [(ngModel)]="machine.fabricant" class="form-control" required/>
+          </div>
+          <div class="input-group col-md-3   input-group-sm">
+            <input type="text" name="fournisseur" #fournisseur   [(ngModel)]="machine.fournisseur" class="form-control" i18n="Pays" required/>
+          </div>
+        </div>
+
+        <div class="row full-name-inputs label">
+          <div class="input-group col-md-4   input-group-sm">
+            <label for="dateAcquisition">Date d'acquisition</label>
+          </div>
+          <div class="input-group col-md-4   input-group-sm">
+            <label for="fingarantie">Fin de garantie</label>
+          </div>
+          <div class="input-group col-md-4   input-group-sm">
+            <label for="criticite">Criticité</label>
+          </div>
+        </div>
+
+        <div class="row full-name-inputs">
+          <div class="input-group col-md-4   input-group-sm">
+            <input name="dateAcquisition" #dateAcquisition  [(ngModel)]="machine.dateAcquisition" class="form-control" [nbDatepicker]="sdatepicker" required/>
+            <nb-datepicker #sdatepicker ></nb-datepicker>
+
+          </div>
+          <div class="input-group col-md-4   input-group-sm">
+          <input name="fingarantie" #fingarantie  [(ngModel)]="machine.finGarantie" class="form-control" [nbDatepicker]="sdatepicker1" required/>
+          <nb-datepicker #sdatepicker1 ></nb-datepicker>
+        </div>
+
+          <div class="input-group col-md-4 input-group-sm">
+            <select class="form-control" hero placeholder="Criticité" status="info"
+                    size="xsmall"    [(ngModel)]="machine.criticite" required>
+              <option value="Faible" >Faible</option>
+              <option value="Moyenne" >Moyenne</option>
+              <option value="Elevée" >Elevée</option>
+              <option value="Très élevée" >Très élevée</option>
+            </select>
+          </div>
+
+        </div>
+
+      <div class="row full-name-inputs label">
+        <div class="input-group col-md-3   input-group-sm">
+          <label for="etat">Etat</label>
+        </div>
+        <div class="input-group col-md-9   input-group-sm">
+          <label for="localisation">Localisation</label>
+        </div>
+      </div>
+
+        <div class="row full-name-inputs">
+
+            <div class="input-group col-md-3 input-group-sm">
+              <select class="form-control" hero placeholder="Etat" status="info"
+                      size="xsmall"    [(ngModel)]="machine.etat" required>
+                <option value="en attente" >En attente</option>
+                <option value="refus" >Réfusée</option>
+                <option value="accept" >Accéptée</option>
+              </select>
+            </div>
+          <div class="input-group col-md-9   input-group-sm">
+            <input type="text" name="localisation" #localisation   [(ngModel)]="machine.localisation" class="form-control" required/>
+
+          </div></div>
+          <div class="row full-name-inputs label">
+            <div class="input-group col-md-12   input-group-sm">
+              <label for="com">Commentaires</label>
+            </div>
+          </div>
+
+          <div class="row full-name-inputs">
+
+            <div class="input-group col-md-12   input-group-sm">
+              <textarea rows="4" placeholder="Commentaires" class="form-control" #localisation
+                        [(ngModel)]="machine.commentaires"></textarea>
+            </div>
+        </div>
+
+      <div style="text-align:right;">
+        <button nbButton style="cursor: pointer;margin: 0.5rem;align-content: center;" (click)="onAddRCM()">{{ARCM}}</button>
+        <button nbButton style="cursor: pointer;margin: 0.5rem;align-content: center;" (click)="close()">Annuler</button>
+      </div>
+    </nb-card-body>
+  </nb-card>
+    </div>
+  </div>
+
+</div>
+
+

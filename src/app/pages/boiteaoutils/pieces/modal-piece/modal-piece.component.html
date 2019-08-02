@@ -1,0 +1,75 @@
+
+<div class="col-md-12 col-lg-12" style="width:950px; height: 450px">
+  <div class="row">
+    <div class="col-lg-12" style="width:600px; height: 300px">
+
+
+      <nb-card >
+        <nb-card-body>
+
+          <div class="row full-name-inputs label">
+            <div class="input-group col-md-7   input-group-sm">
+              <label class="text-label" for="designation">Désignation</label>
+            </div>
+
+            <div class="input-group col-md-5   input-group-sm">
+              <label for="libelle">Libellé</label>   </div>
+          </div>
+
+
+
+          <div class="row full-name-inputs">
+            <div class="input-group col-md-7   input-group-sm">
+              <input type="text" name="Désignation" #designation [(ngModel)]="piece.designationP" maxlength="50" class="form-control"  >
+            </div>
+
+            <div class="input-group col-md-5   input-group-sm">
+              <input type="text" name="libelle" #libelle [(ngModel)]="piece.libelleP" class="form-control">
+            </div>
+          </div>
+          <div class="row full-name-inputs label">
+            <div class="input-group col-md-2   input-group-sm">
+              <label for="ref">Référence</label>
+            </div>
+
+            <div class="input-group col-md-3   input-group-sm">
+              <label for="unite">Unité</label>
+            </div>
+            <div class="input-group col-md-3   input-group-sm">
+              <label for="prixP">Prix unitaire</label>
+            </div>
+            <div class="input-group col-md-4   input-group-sm">
+              <label for="date">Date d'achat</label>
+            </div>
+          </div>
+          <div class="row full-name-inputs">
+            <div class="input-group col-md-2   input-group-sm">
+              <input type="text" #ref name="ref" [(ngModel)]="piece.refP" class="form-control" required/>
+            </div>
+
+            <div class="input-group col-md-3   input-group-sm">
+              <input type="number" name="unite"   #unite [(ngModel)]="piece.quantiteP" class="form-control">
+            </div>
+            <div class="input-group col-md-3   input-group-sm">
+              <input type="number" name="PrixP"  #prixP [(ngModel)]="piece.prixP" class="form-control">
+            </div>
+            <div class="input-group col-md-4   input-group-sm">
+              <input name="dateAchat" #dateAchat  [(ngModel)]="piece.dateP" class="form-control" [nbDatepicker]="sdatepicker" required/>
+              <nb-datepicker #sdatepicker ></nb-datepicker>
+
+            </div>
+          </div>
+
+
+          <div style="text-align:right;">
+            <button nbButton style="cursor: pointer;margin: 0.5rem;align-content: center;" (click)="onAddRCM()">{{ARCM}}</button>
+            <button nbButton style="cursor: pointer;margin: 0.5rem;align-content: center;" (click)="close()">Annuler</button>
+          </div>
+        </nb-card-body>
+      </nb-card>
+    </div>
+  </div>
+
+</div>
+
+

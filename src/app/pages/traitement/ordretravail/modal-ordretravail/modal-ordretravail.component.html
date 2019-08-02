@@ -1,0 +1,145 @@
+<div class="col-md-12 col-lg-12" style="width:950px; height: 450px">
+  <div class="row">
+    <div class="col-lg-12" style="width:600px; height: 300px">
+      <nb-card>
+        <nb-card-body>
+          <div class="row full-name-inputs label">
+            <div class="input-group col-md-2   input-group-sm">
+              <label class="text-label" for="numOrdre">N° Ordre</label>
+            </div>
+
+
+            <div class="input-group col-md-5   input-group-sm">
+              <label for="machine">Machine</label>
+            </div>
+
+            <div class="input-group col-md-4   input-group-sm">
+              <label class="text-label" for="module">Module</label>
+            </div>
+          </div>
+
+          <div class="row full-name-inputs">
+
+            <div class="input-group col-md-2  input-group-sm">
+              <input type="number" #numOrdre class="form-control"
+                     [(ngModel)]="ordre.numOrdre" required/>
+            </div>
+            <div class="input-group col-md-5  input-group-sm">
+              <nb-select hero placeholder="Choisir une machine" name="Machine" [(ngModel)]="ordre.machine" required>
+                <nb-option *ngFor="let machine of machines" [value]="machine" i18n="machine">{{machine.designation}}</nb-option>
+              </nb-select>
+            </div>
+
+            <div class="input-group col-md-4 input-group-sm">
+              <select class="form-control" hero placeholder="module" status="info"
+                      size="xsmall"    [(ngModel)]="ordre.module" required>
+                <option value="Module défini" >(Module non défini)</option>
+                <option value="GPAO" >GPAO</option>
+                <option value="SAV" >SAV</option>
+                <option value="Interne" >Interne</option>
+              </select>
+            </div>
+
+          </div>
+          <div class="row full-name-inputs label">
+            <div class="input-group col-md-3   input-group-sm">
+              <label class="text-label" for="emission">N° émission</label>
+            </div>
+
+            <div class="input-group col-md-5   input-group-sm">
+              <label for="dateOT">Date Création</label>
+            </div>
+
+            <div class="input-group col-md-3   input-group-sm">
+              <label class="text-label" for="dateFin">Date Fin</label>
+            </div>
+          </div>
+
+            <div class="row full-name-inputs">
+            <div class="input-group col-md-4 col-lg-3 input-group-sm">
+              <nb-select hero placeholder="Choisir numéro de la demande" name="demande" [(ngModel)]="ordre.demande" required>
+                <nb-option *ngFor="let demande of demandes" [value]="demande" i18n="demande">{{demande.emission}}</nb-option>
+              </nb-select>
+            </div>
+              <div class="input-group col-md-4 col-lg-3 input-group-sm">
+                <input name="dateOT" #dateOT  [(ngModel)]="ordre.dateOT" class="form-control" [nbDatepicker]="sdatepicker" required/>
+                <nb-datepicker #sdatepicker ></nb-datepicker>
+              </div>
+              <div class="input-group col-md-4 col-lg-3 input-group-sm">
+                <input name="dateFin" #dateFin  [(ngModel)]="ordre.dateFin" class="form-control" [nbDatepicker]="sdatepicker1" required/>
+                <nb-datepicker #sdatepicker1 ></nb-datepicker>
+              </div>
+          </div>
+          <div class="row full-name-inputs label">
+
+            <div class="input-group col-md-4   input-group-sm">
+              <label for="typeMaintenance">Type maintenance</label>
+            </div>
+            <div class="input-group col-md-3   input-group-sm">
+              <label for="niveauMaintenance">Niveau maintenance</label>
+            </div>
+            <div class="input-group col-md-5   input-group-sm">
+              <label for="criticite">Criticité</label>
+            </div>
+          </div>
+          <div class="row full-name-inputs">
+
+            <div class="input-group col-md-4 input-group-sm">
+              <select class="form-control" hero placeholder="typeMaintenance" status="info"
+                      size="xsmall"    [(ngModel)]="ordre.typeMaintenance" required>
+                <option value="Préventive" >Préventive</option>
+                <option value="Corrective" >Corrective</option>
+                <option value="Conditionnelle" >Conditionnelle</option>
+              </select>
+            </div>
+            <div class="input-group col-md-3 input-group-sm">
+              <select class="form-control" hero placeholder="niveauMaintenance" status="info"
+                      size="xsmall"    [(ngModel)]="ordre.niveauMaintenance" required>
+                <option value="1" >1</option>
+                <option value="2" >2</option>
+                <option value="3" >3</option>
+                <option value="4" >4</option>
+                <option value="5" >5</option>
+              </select>
+            </div>
+            <div class="input-group col-md-4 input-group-sm">
+              <select class="form-control" hero placeholder="criticite" status="info"
+                      size="xsmall"    [(ngModel)]="ordre.criticite" required>
+                <option value="Faible" >Faible</option>
+                <option value="Moyenne" >Moyenne</option>
+                <option value="Elevée" >Elevée</option>
+                <option value="Très Elevée" >Très Elevée</option>
+              </select>
+            </div>
+          </div>
+          <div class="row full-name-inputs label">
+
+            <div class="input-group col-md-4   input-group-sm">
+              <label for="pieces">Pièces utilisés</label>
+            </div>
+
+            <div class="input-group col-md-5   input-group-sm">
+              <label for="outillages">Outillages utilisés</label>
+            </div>
+          </div>
+          <div class="row full-name-inputs">
+
+
+            <div class="input-group col-md-5  input-group-sm">
+              <nb-select hero placeholder="Choisir les pièces" name="Piece" [(ngModel)]="selectedItemNgModel" required>
+                <nb-option *ngFor="let piece of pieces" [value]="piece" i18n="piece">{{piece.designationP}}</nb-option>
+              </nb-select>
+            </div>
+            </div>
+
+          <div style="text-align:right;">
+            <button nbButton style="cursor: pointer;margin: 0.5rem;align-content: center;" (click)="onAddRCM()">{{ARCM}}</button>
+            <button nbButton style="cursor: pointer;margin: 0.5rem;align-content: center;">Annuler</button>
+          </div>
+        </nb-card-body>
+      </nb-card>
+    </div>
+  </div>
+
+</div>
+
